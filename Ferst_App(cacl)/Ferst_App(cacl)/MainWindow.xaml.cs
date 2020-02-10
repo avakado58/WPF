@@ -23,6 +23,18 @@ namespace Ferst_App_cacl_
         public MainWindow()
         {
             InitializeComponent();
+            foreach (UIElement uI in mainGrid.Children)
+            {
+                if (uI is Button)
+                {
+                    ((Button)uI).Click += buttons_Click;
+                }
+            }
         }
+        private void buttons_Click(object sender, RoutedEventArgs e)
+        {
+            textMain.Text += ((Button)sender).Content;
+        }
+
     }
 }
