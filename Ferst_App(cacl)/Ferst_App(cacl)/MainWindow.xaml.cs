@@ -101,6 +101,10 @@ namespace Ferst_App_cacl_
                     {
                         MessageBox.Show("Ошибка, на ноль делить нельзя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                         right = "";
+                        left = "";
+                        operation = "";
+                        textMain.Text = "";
+
                     }
                     else
                     {
