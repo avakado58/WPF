@@ -31,9 +31,88 @@ namespace Ferst_App_cacl_
                 }
             }
         }
+        string operation = "";
+        string left = "";
+        string right = "";
         private void buttons_Click(object sender, RoutedEventArgs e)
         {
-            textMain.Text += ((Button)sender).Content;
+
+            string sBut = (string)((Button)sender).Content;
+            textMain.Text += sBut;
+
+            int nam;
+            bool flagDigit = int.TryParse(sBut, out nam);
+            if(flagDigit)
+            {
+                if(operation=="")
+                {
+                    left += sBut;
+                }
+                else
+                {
+                    right += sBut;
+                }
+            }else
+            {
+                if(sBut=="=")
+                {
+                    Operations();
+                    textMain.Text += right;
+                    operation = "";
+                }
+                else if (sBut=="Clear")
+                {
+                    right = "";
+                    left = "";
+                    operation = "";
+                    textMain.Text = "";
+                }
+                else
+                {
+                    if(right!="")
+                    {
+                        Operations();
+                        left = right;
+                        right = "";
+                    }
+                    operation = sBut;
+                }
+                
+            }
+
+
+
+        }
+        private void Operations()
+        {
+            switch(operation)
+            {
+                case "+":
+                    right = Convert.ToString(int.Parse(left) + int.Parse(right));
+                    
+                    
+
+                    break;
+                case "-":
+                    right = Convert.ToString(int.Parse(left) - int.Parse(right));
+                    break;
+                case "/":
+                    if(int.Parse(right)==0)
+                    {
+                        MessageBox.Show("Ошибка, на ноль делить нельзя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        right = "";
+                    }
+                    else
+                    {
+                        right = Convert.ToString(int.Parse(left) / int.Parse(right));
+                    }
+                    
+                    break;
+                case "*":
+                    right = Convert.ToString(int.Parse(left) * int.Parse(right));
+                    break;
+            }
+                
         }
 
     }
