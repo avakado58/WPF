@@ -11,6 +11,7 @@
             <Setter Property="Control.Background" Value="Chocolate"  />
             <Setter Property="Control.FontFamily" Value="Verdana" />
             <Setter Property="Control.FontSize" Value="35"/>
+            <Setter Property="Control.Foreground" Value="FloralWhite" />
         </Style>
     </Window.Resources>
     <Grid x:Name="mainGrid">
@@ -27,7 +28,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="textMain" Grid.Column="0" Grid.ColumnSpan="4" FontSize="40" TextAlignment="Right"/>
+        <TextBox x:Name="textMain" Background="FloralWhite" Grid.Column="0" Grid.ColumnSpan="4" FontSize="40" TextAlignment="Right" Foreground="Chocolate"/>
         <Button  Grid.Column="0" Grid.Row="1" Content="1" Style="{StaticResource backgraund}"   />
         <Button  Grid.Column="1" Grid.Row="1" Content="2" Style="{StaticResource backgraund}"  />
         <Button  Grid.Column="2" Grid.Row="1" Content="3" Style="{StaticResource backgraund}"/>
