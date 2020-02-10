@@ -27,22 +27,21 @@ namespace Ferst_App_cacl_
             {
                 if (uI is Button)
                 {
-                    ((Button)uI).Click += buttons_Click;
+                    ((Button)uI).Click += Buttons_Click;
                 }
             }
         }
         string operation = "";
         string left = "";
         string right = "";
-        private void buttons_Click(object sender, RoutedEventArgs e)
+        private void Buttons_Click(object sender, RoutedEventArgs e)
         {
 
             string sBut = (string)((Button)sender).Content;
             textMain.Text += sBut;
 
-            int nam;
-            bool flagDigit = int.TryParse(sBut, out nam);
-            if(flagDigit)
+            bool flagDigit = int.TryParse(sBut, out int nam);
+            if (flagDigit)
             {
                 if(operation=="")
                 {
