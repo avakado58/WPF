@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:Ferst_App_cacl_"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="backgraund">
+            <Setter Property="Control.Background" Value="Chocolate"  />
+            <Setter Property="Control.FontFamily" Value="Verdana" />
+            <Setter Property="Control.FontSize" Value="35"/>
+        </Style>
+    </Window.Resources>
     <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition x:Name="textBox"/>
@@ -21,21 +28,21 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="textMain" Grid.Column="0" Grid.ColumnSpan="4" FontSize="40" TextAlignment="Right"/>
-        <Button  Grid.Column="0" Grid.Row="1" Content="1" FontSize="35"  />
-        <Button  Grid.Column="1" Grid.Row="1" Content="2" FontSize="35"  />
-        <Button  Grid.Column="2" Grid.Row="1" Content="3" FontSize="35"  />
-        <Button  Grid.Column="0" Grid.Row="2" Content="4" FontSize="35"  />
-        <Button  Grid.Column="1" Grid.Row="2" Content="5" FontSize="35"  />
-        <Button  Grid.Column="2" Grid.Row="2" Content="6" FontSize="35"  />
-        <Button  Grid.Column="0" Grid.Row="3" Content="7" FontSize="35"  />
-        <Button  Grid.Column="1" Grid.Row="3" Content="8" FontSize="35"  />
-        <Button  Grid.Column="2" Grid.Row="3" Content="9" FontSize="35"  />
-        <Button  Grid.Column="0" Grid.Row="4" Content="Clear" FontSize="35"  />
-        <Button  Grid.Column="1" Grid.Row="4" Content="0" FontSize="35"  />
-        <Button  Grid.Column="2" Grid.Row="4" Content="=" FontSize="35"  />
-        <Button  Grid.Column="3" Grid.Row="1" Content="+" FontSize="35"  />
-        <Button  Grid.Column="3" Grid.Row="2" Content="-" FontSize="35"  />
-        <Button  Grid.Column="3" Grid.Row="3" Content="/" FontSize="35"  />
-        <Button  Grid.Column="3" Grid.Row="4" Content="*" FontSize="35"  />
+        <Button  Grid.Column="0" Grid.Row="1" Content="1" Style="{StaticResource backgraund}"   />
+        <Button  Grid.Column="1" Grid.Row="1" Content="2" Style="{StaticResource backgraund}"  />
+        <Button  Grid.Column="2" Grid.Row="1" Content="3" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="0" Grid.Row="2" Content="4" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="1" Grid.Row="2" Content="5" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="2" Grid.Row="2" Content="6" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="0" Grid.Row="3" Content="7" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="1" Grid.Row="3" Content="8" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="2" Grid.Row="3" Content="9" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="0" Grid.Row="4" Content="Clear" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="1" Grid.Row="4" Content="0" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="2" Grid.Row="4" Content="=" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="3" Grid.Row="1" Content="+" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="3" Grid.Row="2" Content="-" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="3" Grid.Row="3" Content="/" Style="{StaticResource backgraund}"/>
+        <Button  Grid.Column="3" Grid.Row="4" Content="*" Style="{StaticResource backgraund}"/>
     </Grid>
 </Window>
